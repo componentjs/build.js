@@ -1,0 +1,5 @@
+{
+  "name": "example",
+  "paths": ["lib"],
+  "locals": ["boot"]
+}

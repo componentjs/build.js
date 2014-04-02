@@ -1,0 +1,28 @@
+{
+  "name": "component-build",
+  "description": "main logic for component's build command",
+  "version": "0.0.0",
+  "author": {
+    "name": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "twitter": "https://twitter.com/jongleberry"
+  },
+  "license": "MIT",
+  "repository": "component/resolver.js",
+  "dependencies": {
+    "debug": "*",
+    "component-builder2": "*",
+    "builder-es6-module-to-cjs": "*",
+    "builder-autoprefixer": "*",
+    "es6-module-transpiler": "~0.3.6",
+    "autoprefixer": "^1.1.20140327"
+  },
+  "devDependencies": {
+    "mocha": "^1.17.0"
+  },
+  "main": "lib",
+  "scripts": {
+    "test": "mocha --reporter spec --timeout 10s --bail"
+  }
+}

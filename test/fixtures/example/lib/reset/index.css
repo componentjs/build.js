@@ -1,0 +1,4 @@
+body {
+  font-family: sans-serif;
+  display: flex; /* check autoprefixer support */
+}
