@@ -12,9 +12,9 @@
   "repository": "component/resolver.js",
   "dependencies": {
     "debug": "*",
-    "component-builder2": "*",
-    "builder-es6-module-to-cjs": "*",
-    "builder-autoprefixer": "*",
+    "component-builder": "^1.0.0",
+    "builder-es6-module-to-cjs": "^1.0.1",
+    "builder-autoprefixer": "^1.0.0",
     "es6-module-transpiler": "~0.3.6",
     "autoprefixer": "^1.1.20140327"
   },
