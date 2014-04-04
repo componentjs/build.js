@@ -4,7 +4,7 @@ var join = require('path').join;
 var assert = require('assert');
 var vm = require('vm');
 
-var Build = require('..');
+var Build = require('../lib');
 
 function fixture(name) {
   return join(__dirname, 'fixtures', name);
