@@ -1,7 +1,7 @@
 {
   "name": "component-build",
   "description": "main logic for component's build command",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
