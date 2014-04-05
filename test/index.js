@@ -25,8 +25,6 @@ describe('example', function () {
   })
 
   it('should build scripts', function (done) {
-    build.set('require', true);
-
     build.scripts(function (err, js) {
       if (err) return done(err);
 
