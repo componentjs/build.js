@@ -63,7 +63,8 @@ Options other than those supported by `component-resolver` and `component-builde
 
 - `prefix` <''> - for rewriting URLs in CSS
 - `browsers` <''> - autoprefixer browser support
-- `umd` <false> - wrap the build in a UMD build with name `umd`.
+- `umd` <false> - wrap the build in a UMD build with name `umd`
+- `autorequire` <true> - automatically require the entry point of the build
 
 ### build.set(key, value)
 
