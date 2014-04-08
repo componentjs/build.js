@@ -2,9 +2,9 @@
 1.2.0 / 2014-04-07
 ==================
 
-* add `.scriptPlugins()`
-* add `.stylePlugins()`
-* add `.filePlugins()`
+* add `.scriptPlugins(build, options)`
+* add `.stylePlugins(build, options)`
+* add `.filePlugins(build, options)`
 
 1.1.0 / 2014-04-07
 ==================
