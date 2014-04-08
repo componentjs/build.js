@@ -1,6 +1,8 @@
 # Component Build
 
-This is a separate repo for the primary logic behind the `component-build` command. Feel free to fork this or use it as a baseline to create your own builder. This is a thin wrapper around `component-builder2`.
+This is a separate repo for the primary logic behind the `component-build` command.
+Feel free to fork this or use it as a baseline to create your own builder.
+This is a thin wrapper around `component-builder2`.
 
 Some features included by default:
 
@@ -10,11 +12,14 @@ Some features included by default:
     - Syntax error checking
     - JSON files and JSON syntax error checking
     - Templates as strings
+    - Autorequires the bundle by default
+    - Optional UMD wrap
+    - Resolves the entry point of the bundle automatically
 
 - Styles
 
     - Automatic CSS autoprefixing
-    - Rewrite CSS URLs/
+    - Rewrite CSS URLs/ against an arbitrary prefix
 
 - Files
 
@@ -76,15 +81,72 @@ build.set('development', false);
 
 ### build.scripts(callback)
 
-Builds the JS. Returns `function (err, js) {}` where `js` is the build string. If nothing was build, `js === ''`.
+Builds the JS.
+Returns `function (err, js) {}` where `js` is the build string.
+If nothing was built, `js === ''`.
 
 ### build.styles(callback)
 
-Builds the CSS. Returns `function (err, css) {}` where `css` is the build string. If nothing was build, `css === ''`.
+Builds the CSS.
+Returns `function (err, css) {}` where `css` is the build string.
+If nothing was built, `css === ''`.
 
 ### build.files(callback)
 
-Builds the files. Returns `function (err) {}`.
+Builds the files.
+Returns `function (err) {}`.
+
+### build.scriptPlugins(build, options)
+
+Optionally override the default plugins used for `.js` builds.
+`build` is a builder instance, and `options` are the options passed to `Build`.
+You may overwrite this entirely if you'd like:
+
+```js
+var build = Build(tree, options);
+build.scriptPlugins = function (build, options) {
+  build
+  .use('scripts',
+    es6modules(options),
+    plugins.js(options))
+  .use('json',
+    plugins.json(options))
+  .use('templates',
+    plugins.string(options));
+};
+build.scripts(function (err, js) {
+
+});
+```
+
+You may also append or prepend plugins like so:
+
+```js
+var defaults = build.scriptPlugins;
+build.scriptPlugins = function (build, options) {
+  build.use('templates', jade(options));
+  build.scriptPlugins(build, options);
+  build.use('jade', jade(options));
+}
+```
+
+`return`ing anything is NOT necessary.
+Do NOT call `.end()`.
+
+This method is available on both the constructor and the prototype:
+
+```js
+var Build = require('component-build');
+Build.scriptPlugins === Build.prototype.scriptPlugins;
+```
+
+### build.stylePlugins(build, options)
+
+Same as `build.scriptPlugins()`, but with `.css`.
+
+### build.filePlugins(build, options)
+
+Same as `build.scriptPlugins()`, but with the files.
 
 ## License
 
