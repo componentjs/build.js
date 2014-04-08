@@ -125,7 +125,7 @@ You may also append or prepend plugins like so:
 var defaults = build.scriptPlugins;
 build.scriptPlugins = function (build, options) {
   build.use('templates', jade(options));
-  build.scriptPlugins(build, options);
+  defaults(build, options);
   build.use('jade', jade(options));
 }
 ```
