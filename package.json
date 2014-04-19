@@ -9,7 +9,7 @@
     "twitter": "https://twitter.com/jongleberry"
   },
   "license": "MIT",
-  "repository": "component/resolver.js",
+  "repository": "component/build.js",
   "dependencies": {
     "debug": "*",
     "component-builder": "^1.1.2",
