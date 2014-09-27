@@ -12,12 +12,12 @@
   "repository": "component/build.js",
   "dependencies": {
     "debug": "*",
-    "component-builder": "^1.1.2",
+    "component-builder": "^1.1.12",
     "builder-es6-module-to-cjs": "^1.1.0",
     "builder-autoprefixer": "^1.0.0"
   },
   "devDependencies": {
-    "component-resolver": "^1.1.1",
+    "component-resolver": "^1.2.1",
     "mocha": "^1.17.0"
   },
   "main": "lib",
