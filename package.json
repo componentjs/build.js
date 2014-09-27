@@ -1,7 +1,7 @@
 {
   "name": "component-build",
   "description": "main logic for component's build command",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
@@ -14,7 +14,7 @@
     "debug": "*",
     "component-builder": "^1.1.12",
     "builder-es6-module-to-cjs": "^1.1.0",
-    "builder-autoprefixer": "^1.0.0"
+    "component-builder-autoprefixer": "^1.0.3"
   },
   "devDependencies": {
     "component-resolver": "^1.2.1",
