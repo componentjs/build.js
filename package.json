@@ -18,10 +18,12 @@
   },
   "devDependencies": {
     "component-resolver": "^1.2.1",
-    "mocha": "^1.17.0"
+    "mocha": "^1.17.0",
+    "gnode": "0",
+    "regenerator": "0.4.6"
   },
   "main": "lib",
   "scripts": {
-    "test": "mocha --reporter spec --timeout 10s --bail"
+    "test": "NODE=gnode make test"
   }
 }
