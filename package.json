@@ -14,7 +14,7 @@
     "debug": "*",
     "component-builder": "^1.1.12",
     "builder-es6-module-to-cjs": "^1.1.0",
-    "component-builder-autoprefixer": "^1.0.3"
+    "builder-autoprefixer": "^1.0.3"
   },
   "devDependencies": {
     "component-resolver": "^1.2.1",
